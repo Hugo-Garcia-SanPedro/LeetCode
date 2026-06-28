@@ -11,8 +11,7 @@ I am actively updating this repository with new problems, optimized solutions, a
 The repository is organized by problem difficulty and topic to keep things tidy:
 ```text
 ├── Easy/
-│   ├── 0001-two-sum/
-│   │   └── solution.py
+│   ├── twoSum.py
 │   └── ...
 ├── Medium/
 └── Hard/
