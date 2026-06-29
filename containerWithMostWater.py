@@ -1,5 +1,22 @@
+from typing import List
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
+        n = len(height)
+        index1 = 0
+        index2 = 0
+        result = 0
+
+        # Iterate over the array
+        for i in range(n):
+            base = index2 - index1
+            quota = height[i]
+            area = base * quota
+
+            if area > result:
+                result = area
+
+        return result
 
 if __name__ == "__main__":
     solution = Solution()
