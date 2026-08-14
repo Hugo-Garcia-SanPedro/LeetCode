@@ -7,7 +7,7 @@ def searchInsert(nums: List[int], target: int) -> int:
     while inicio <= final:
         medio = inicio + (final - inicio) // 2
         if nums[medio] == target:
-            return nums[medio]
+            return medio
         elif nums[medio] < target:
             inicio = nums[medio] + 1
         else:
