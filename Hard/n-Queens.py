@@ -10,7 +10,7 @@ class Solution:
         def backtracking(fila):
             # Paso base
             if fila == n:
-                copia = ["".join(fila) for fila in tablero]
+                copia = ["".join(filaTablero) for filaTablero in tablero]
                 resultado.append(copia)
                 return
 
@@ -24,8 +24,8 @@ class Solution:
                     # Por ultimo se deshace el movimiento
                     tablero[fila][columna] = "."
 
-            backtracking(0)
-            return resultado
+        backtracking(0)
+        return resultado
 
     def esSeguro(self, f: int, c: int, tablero):
         # Comprobamls las filas
@@ -57,6 +57,6 @@ class Solution:
 
 if __name__ == "__main__":
     solucion = Solution()
-    n = 5
+    n = 4
     tablero = solucion.solucionNQueens(n=n)
     print(tablero)
