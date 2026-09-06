@@ -1,1 +1,2 @@
-def uniquePaths(m: int, n: int) -> int:
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
