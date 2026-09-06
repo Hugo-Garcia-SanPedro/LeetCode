@@ -53,3 +53,9 @@ class Solution:
             column = column + 1
 
         return True
+
+if __name__ == "__main__":
+    solutions = Solution()
+    n = 4
+    numberSolutions = solutions.totalNQueens(n=n)
+    print(f"The total number of solutions is {numberSolutions}.")
