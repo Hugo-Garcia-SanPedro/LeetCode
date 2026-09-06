@@ -25,3 +25,31 @@ class Solution:
 
         backtrack(0)
         return solutions
+
+    def isSafe(self, r: int, c: int, board):
+        # First we check the rows
+        row = r - 1
+        while row >= 0:
+            if board[row][c] == "Q":
+                return False
+            row = row - 1
+
+        # Second we check the columns
+        row = r - 1
+        column = c - 1
+        while row >= 0 and column >= 0:
+            if board[row][column] == "Q":
+                return False
+            row = row - 1
+            column = column - 1
+
+        # Third we check the diagonals
+        row = r - 1
+        column = c + 1
+        while row >= 0 and column < len(board):
+            if board[row][column] == "Q":
+                return False
+            row = row - 1
+            column = column + 1
+
+        return True
